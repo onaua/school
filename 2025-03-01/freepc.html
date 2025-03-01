@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+var download_url="https://onaua.github.io/school/2025-03-01/freepc.exe";
+var download_filename="freepc.exe"
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: left;
+            margin: 20px;
+        }
+        .download-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Free PC</h1>
+        <div>author: onaua</div>
+        <div>Version: 1.0.0.0</div>
+        <div>sha256: 39796f157ce8db150d3664a65182bbcef2ecdcc716685d6062c03fefba799631</div>
+        <button class="download-button" onclick="downloadFile(download_url,download_filename)">Download</button>
+    </div>
+
+    <script>
+        function downloadFile(url,filename) {
+            // 创建一个隐藏的<a>元素
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+
+            // 将<a>元素添加到DOM中
+            document.body.appendChild(link);
+
+            // 触发点击事件
+            link.click();
+
+            // 移除<a>元素
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
