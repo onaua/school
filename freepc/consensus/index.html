@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+var download_url="https://onaua.github.io/school/freepc/consensus/freepc.exe";
+var download_filename="freepc.exe"
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: left;
+            margin: 20px;
+        }
+        .download-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Free PC</h1>
+        <div>WARN: Only used in school.</div>
+        <div>Author: onaua</div>
+        <div>Version: 1.3.0.0</div>
+        <div>Code: CONSENSUS
+        <div>SHA256: 1e19ccb9cec724de521509dfe883eb445a7d4303d8e2953bd13fe7d83c1c82ae</div>
+        <div>From: 406</div>
+        <div>All rights reserved.</div>
+        <button class="download-button" onclick="downloadFile(download_url,download_filename)">Download</button>
+    </div>
+
+    <script>
+        function downloadFile(url,filename) {
+            // 创建一个隐藏的<a>元素
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+
+            // 将<a>元素添加到DOM中
+            document.body.appendChild(link);
+
+            // 触发点击事件
+            link.click();
+
+            // 移除<a>元素
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
